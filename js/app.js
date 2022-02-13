@@ -39,3 +39,20 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         console.log('ami hotash');
     }
 });
+
+
+function verifyPin(){
+    // console.log('hayre nana');
+    const pin =document.getElementById('display-input').value;
+    const typed =document.getElementById('typed-numbers').value;
+    if(pin==typed){
+        // console.log('yehaa');
+        const failNotification =document.getElementById('notify-success');
+        failNotification.style.display='block';
+    }
+    else{
+        const failNotification =document.getElementById('notify-failure');
+        failNotification.style.display='block';
+    }
+
+}
