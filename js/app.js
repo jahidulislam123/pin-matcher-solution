@@ -45,14 +45,20 @@ function verifyPin(){
     // console.log('hayre nana');
     const pin =document.getElementById('display-input').value;
     const typed =document.getElementById('typed-numbers').value;
+    const successNotification =document.getElementById('notify-success');
+    const failNotification =document.getElementById('notify-failure');
+
     if(pin==typed){
         // console.log('yehaa');
-        const failNotification =document.getElementById('notify-success');
-        failNotification.style.display='block';
+     
+        successNotification.style.display='block';
+        failNotification.style.display='none';
+
     }
     else{
-        const failNotification =document.getElementById('notify-failure');
         failNotification.style.display='block';
+        successNotification.style.display='none';
+
     }
 
 }
